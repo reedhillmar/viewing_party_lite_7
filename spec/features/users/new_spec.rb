@@ -75,7 +75,7 @@ RSpec.feature 'User New(register)' do
     expect(page).to have_content("Error: Name can't be blank")
   end
 
-  it '(sad path)it will not create a user with a redundant email (case insensitive)' do
+  it '(sad path)it will not create a user with a duplicate email (case insensitive)' do
     User.create!(name: 'Anne Anderson', email: 'anne.anderson@aol.com', password: 'test1')
 
     visit register_path
@@ -87,6 +87,45 @@ RSpec.feature 'User New(register)' do
 
     expect(page).to have_current_path(register_path)
     expect(page).to have_content('Error: Email has already been taken')
+  end
+
+  it '(sad path)it will not create a user without a password' do
+    visit register_path
+
+    fill_in :name, with: 'Anne'
+    fill_in :email, with: 'Anne.Anderson@aol.com'
+
+    click_button 'Create New User'
+
+    expect(page).to have_current_path(register_path)
+    expect(page).to have_content("Error: Password can't be blank")
+  end
+
+  it '(sad path)it will not create a user without a matching password confirmation' do
+    visit register_path
+
+    fill_in :name, with: 'Anne'
+    fill_in :email, with: 'Anne.Anderson@aol.com'
+    fill_in :password, with: 'test1'
+    fill_in :password_confirmation, with: 'test2'
+
+    click_button 'Create New User'
+
+    expect(page).to have_current_path(register_path)
+    expect(page).to have_content("Error: Password confirmation doesn't match")
+  end
+
+  it '(sad path)it will not create a user without a password confirmation' do
+    visit register_path
+
+    fill_in :name, with: 'Anne'
+    fill_in :email, with: 'Anne.Anderson@aol.com'
+    fill_in :password, with: 'test1'
+
+    click_button 'Create New User'
+
+    expect(page).to have_current_path(register_path)
+    expect(page).to have_content("Error: Password confirmation doesn't match")
   end
 end
 
