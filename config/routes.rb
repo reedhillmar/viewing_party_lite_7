@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   # root "articles#index"
   get "/", to: "welcome#index"
   get "/register", to: "users#new"
+  get '/login', to: 
 
   resources :users, only: [:create, :show] do
     get "/discover", to: "users#discover"
