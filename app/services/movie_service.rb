@@ -4,6 +4,7 @@
 class MovieService < ApplicationService
   def conn
     Faraday.new(url: 'https://api.themoviedb.org') do |faraday|
+      # require 'pry';binding.pry
       faraday.params['api_key'] = Rails.application.credentials.tmdb[:key]
     end
   end
