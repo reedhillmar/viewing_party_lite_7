@@ -21,6 +21,7 @@ RSpec.feature 'User New(register)' do
     fill_in :name, with: 'Joop'
     fill_in :email, with: 'Joop@aol.com'
     fill_in :password, with: 'Joop'
+    fill_in :password_confirmation, with: 'Joop'
 
     click_button 'Create New User'
 
