@@ -20,6 +20,7 @@ RSpec.feature 'User New(register)' do
 
     fill_in :name, with: 'Joop'
     fill_in :email, with: 'Joop@aol.com'
+    fill_in :password, with: 'Joop'
 
     click_button 'Create New User'
 
@@ -74,7 +75,7 @@ RSpec.feature 'User New(register)' do
   end
 
   it '(sad path)it will not create a user with a redundant email (case insensitive)' do
-    User.create!(name: 'Anne Anderson', email: 'anne.anderson@aol.com')
+    User.create!(name: 'Anne Anderson', email: 'anne.anderson@aol.com', password: 'test1')
 
     visit register_path
 
