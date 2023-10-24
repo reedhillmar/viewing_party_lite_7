@@ -7,6 +7,7 @@ class UsersController < ApplicationController
   def create
     user = User.create(user_params)
     if user.save
+      session[:user_id] = user.id
       redirect_to user_path(user)
     else
       redirect_to register_path
@@ -33,8 +34,13 @@ class UsersController < ApplicationController
       redirect_to user_path(user.id)
     else
       flash[:error] = "Your credentials are incorrect."
-      render :login_form
+      redirect_to login_path
     end
+  end
+
+  def logout_user
+    session.delete(:user_id)
+    redirect_to '/'
   end
 
   private
