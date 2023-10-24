@@ -7,6 +7,12 @@
 
 <h3> Existing User </h3>
 
-<% @users.each do |user| %>
-  <%= link_to user.email, user_path(user) %></br>
+<% if current_admin %>
+  <% @users.each do |user| %>
+    <%= link_to user.email, admin_user_path(user) %></br>
+  <% end %>
+<% elsif current_user %>
+  <% @users.each do |user| %>
+    <%= user.email %></br>
+  <% end %>
 <% end %>

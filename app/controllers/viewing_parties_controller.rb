@@ -3,8 +3,14 @@
 # app/controllers/viewing_parties_controller.rb
 class ViewingPartiesController < ApplicationController
   def new
-    @movie = MoviesFacade.new(params[:movie_id]).movie
-    @users = User.where.not(id: params[:user_id])
+    # require 'pry';binding.pry
+    if session[:user_id]
+      @movie = MoviesFacade.new(params[:id]).movie
+      @users = User.where.not(id: session[:user_id])
+    else
+      flash[:alert] = "You must be registered and logged in to create a viewing party."
+      redirect_to movie_path(params[:id])
+    end
   end
 
   def create
@@ -13,14 +19,16 @@ class ViewingPartiesController < ApplicationController
                                 movie_id: params[:movie_id],
                                 duration: params[:duration])
     if params[:duration].to_i < @movie.runtime
-      redirect_to "/users/#{:user_id}/movies/#{:movie_id}/viewing_parties/new"
+      # redirect_to "/users/#{:user_id}/movies/#{:movie_id}/viewing_parties/new"
+      redirect_to new_viewing_party_path(params[:movie_id])
       flash[:alert] = 'Error: Duration must not be less than movie runtime'
     elsif party.save
       create_host_viewing_party(party)
       create_invited_viewing_party(party)
-      redirect_to "/users/#{params[:user_id]}"
+      redirect_to "/dashboard"
     else
-      redirect_to "/users/#{:user_id}/movies/#{:movie_id}/viewing_parties/new"
+      # redirect_to "/users/#{:user_id}/movies/#{:movie_id}/viewing_parties/new"
+      redirect_to new_viewing_party_path(params[:movie_id])
       flash[:alert] = "Error: #{error_message(party.errors)}"
     end
   end
@@ -28,7 +36,7 @@ class ViewingPartiesController < ApplicationController
   private
 
   def create_host_viewing_party(party)
-    UserViewingParty.create!(viewing_party: party, user_id: params[:user_id], host: true)
+    UserViewingParty.create!(viewing_party: party, user_id: session[:user_id], host: true)
   end
   
   def create_invited_viewing_party(party)

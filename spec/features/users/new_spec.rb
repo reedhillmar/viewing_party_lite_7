@@ -25,7 +25,7 @@ RSpec.feature 'User New(register)' do
 
     click_button 'Create New User'
 
-    expect(page).to have_current_path(user_path(User.all.last))
+    expect(page).to have_current_path(dashboard_path)
     expect(page).to have_content("Joop's Dashboard")
   end
 

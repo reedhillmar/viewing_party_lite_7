@@ -2,8 +2,8 @@
 <h3><%= "Create a Movie Party for #{@movie.title}" %></h3>
 
 <%= form_with url: "/viewing_parties", method: :post, data: { turbo: false } do |f| %>
-  <%= f.hidden_field :user_id, value: params[:user_id] %>
-  <%= f.hidden_field :movie_id, value: params[:movie_id] %>
+  <%= f.hidden_field :user_id, value: session[:user_id] %>
+  <%= f.hidden_field :movie_id, value: params[:id] %>
 <h4> Viewing Party Details </h4>
 <table>
   <tr>

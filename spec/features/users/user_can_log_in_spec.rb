@@ -15,7 +15,7 @@ describe 'Logging In' do
 
     click_on 'Log In'
 
-    expect(current_path).to eq(user_path(user.id))
+    expect(current_path).to eq(dashboard_path)
   end
 
   it '(sad path) cannot log in without an email address' do

@@ -8,13 +8,17 @@ Rails.application.routes.draw do
   get '/login', to: "users#login_form"
   post '/login', to: 'users#login_user'
   get '/logout', to: 'users#logout_user'
-  
-  resources :users, only: [:create, :show] do
-    get "/discover", to: "users#discover"
-    resources :movies, only: [:index, :show] do
-      resources :viewing_parties, only: :new
-    end
+  get '/dashboard', to: 'users#show', as: 'dashboard'
+  get '/discover', to: 'users#discover', as: 'discover'
+  get '/movies', to: 'movies#index', as: 'movies'
+  get '/movies/:id', to: 'movies#show', as: 'movie'
+  get '/movies/:id/viewing_parties/new', to: 'viewing_parties#new', as: 'new_viewing_party'
+
+  namespace :admin do
+    resources :users, only: :show
   end
+  
+  resources :users, only: :create
 
   resources :viewing_parties, only: :create
 
