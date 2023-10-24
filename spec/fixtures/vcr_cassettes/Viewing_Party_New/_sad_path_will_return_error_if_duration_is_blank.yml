@@ -2,6 +2,190 @@
 http_interactions:
 - request:
     method: get
+    uri: https://api.themoviedb.org/3/movie/49012?api_key=f7288e89c67ddeca054747d31c85225c
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Tue, 24 Oct 2023 19:52:04 GMT
+      Server:
+      - openresty
+      Cache-Control:
+      - public, max-age=25763
+      X-Memc:
+      - HIT
+      X-Memc-Key:
+      - e9d6154ab25394f91816ede51583e653
+      X-Memc-Age:
+      - '7765'
+      X-Memc-Expires:
+      - '15238'
+      Etag:
+      - W/"6d6bd2c3a2a7ac8d8786996013cd5eaf"
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Cache:
+      - Hit from cloudfront
+      Via:
+      - 1.1 584febef1233840787d98d1cd03f82c0.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN52-C1
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      X-Amz-Cf-Id:
+      - fO5Kz6Tc3_r0qJvE0hYZG7mWKAqGXU7a7NeaGMp3JbgBG4sCMg9dug==
+      Age:
+      - '10772'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"adult":false,"backdrop_path":"/p2h886S7r4znUYvp1ELOTq7jqUZ.jpg","belongs_to_collection":null,"budget":40000000,"genres":[{"id":35,"name":"Comedy"},{"id":10749,"name":"Romance"}],"homepage":"http://arthurthemovie.warnerbros.com/","id":49012,"imdb_id":"tt1334512","original_language":"en","original_title":"Arthur","overview":"A
+        drunken playboy stands to lose a wealthy inheritance when he falls for a woman
+        that his family doesn''t like.","popularity":18.263,"poster_path":"/foUTAJurvnbUoIUbnuUk5dyHx7M.jpg","production_companies":[{"id":174,"logo_path":"/IuAlhI9eVC9Z8UQWOIDdWRKSEJ.png","name":"Warner
+        Bros. Pictures","origin_country":"US"}],"production_countries":[{"iso_3166_1":"US","name":"United
+        States of America"}],"release_date":"2011-04-08","revenue":48147945,"runtime":110,"spoken_languages":[{"english_name":"English","iso_639_1":"en","name":"English"}],"status":"Released","tagline":"Meet
+        the world''s only loveable billionaire.","title":"Arthur","video":false,"vote_average":5.567,"vote_count":689}'
+  recorded_at: Tue, 24 Oct 2023 22:51:36 GMT
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/268?api_key=f7288e89c67ddeca054747d31c85225c
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Tue, 24 Oct 2023 19:52:05 GMT
+      Server:
+      - openresty
+      Cache-Control:
+      - public, max-age=28775
+      X-Memc:
+      - HIT
+      X-Memc-Key:
+      - 2685799600be7f9ca2800212ea25fc41
+      X-Memc-Age:
+      - '9552'
+      X-Memc-Expires:
+      - '17516'
+      Etag:
+      - W/"1de2555b3722e91575bdf14d66ed321b"
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Cache:
+      - Hit from cloudfront
+      Via:
+      - 1.1 30ea845097208edbc19305c535a5be98.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN52-C1
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      X-Amz-Cf-Id:
+      - IYjkH1c8M8xsMGyeMWYANMzM2RdTCs9Zfaftc7VZPy7tVBJUXLprBw==
+      Age:
+      - '10771'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJhZHVsdCI6ZmFsc2UsImJhY2tkcm9wX3BhdGgiOiIvZnJEUzhBNXZJUDkyN0tZQXhUVlZLUklicVp3LmpwZyIsImJlbG9uZ3NfdG9fY29sbGVjdGlvbiI6eyJpZCI6MTIwNzk0LCJuYW1lIjoiQmF0bWFuIENvbGxlY3Rpb24iLCJwb3N0ZXJfcGF0aCI6Ii80QVVvcXQ3MkNWUDRVVjkwMmhtZERqNHQ1UTkuanBnIiwiYmFja2Ryb3BfcGF0aCI6Ii80VUhaV3c1bFYzWm9hZFRqWHVWT2FrZEgzMkwuanBnIn0sImJ1ZGdldCI6MzUwMDAwMDAsImdlbnJlcyI6W3siaWQiOjE0LCJuYW1lIjoiRmFudGFzeSJ9LHsiaWQiOjI4LCJuYW1lIjoiQWN0aW9uIn0seyJpZCI6ODAsIm5hbWUiOiJDcmltZSJ9XSwiaG9tZXBhZ2UiOiIiLCJpZCI6MjY4LCJpbWRiX2lkIjoidHQwMDk2ODk1Iiwib3JpZ2luYWxfbGFuZ3VhZ2UiOiJlbiIsIm9yaWdpbmFsX3RpdGxlIjoiQmF0bWFuIiwib3ZlcnZpZXciOiJCYXRtYW4gbXVzdCBmYWNlIGhpcyBtb3N0IHJ1dGhsZXNzIG5lbWVzaXMgd2hlbiBhIGRlZm9ybWVkIG1hZG1hbiBjYWxsaW5nIGhpbXNlbGYgXCJUaGUgSm9rZXJcIiBzZWl6ZXMgY29udHJvbCBvZiBHb3RoYW0ncyBjcmltaW5hbCB1bmRlcndvcmxkLiIsInBvcHVsYXJpdHkiOjUwLjA4LCJwb3N0ZXJfcGF0aCI6Ii9jaWo0ZGQyMXYyUmsyWXRVUWJWNWtXNjlXQjIuanBnIiwicHJvZHVjdGlvbl9jb21wYW5pZXMiOlt7ImlkIjo0MzU3LCJsb2dvX3BhdGgiOm51bGwsIm5hbWUiOiJUaGUgR3ViZXItUGV0ZXJzIENvbXBhbnkiLCJvcmlnaW5fY291bnRyeSI6IiJ9LHsiaWQiOjE3NCwibG9nb19wYXRoIjoiL0l1QWxoSTllVkM5WjhVUVdPSURkV1JLU0VKLnBuZyIsIm5hbWUiOiJXYXJuZXIgQnJvcy4gUGljdHVyZXMiLCJvcmlnaW5fY291bnRyeSI6IlVTIn0seyJpZCI6MTM4MiwibG9nb19wYXRoIjoiL3NPZzdMR0VTUEg1dkNUT0lkYk1oTHV5cG9MTC5wbmciLCJuYW1lIjoiUG9seUdyYW0gRmlsbWVkIEVudGVydGFpbm1lbnQiLCJvcmlnaW5fY291bnRyeSI6IlVTIn0seyJpZCI6NDI5LCJsb2dvX3BhdGgiOiIvMlRjMVAzQWM4TTQ3OW5hUHAxa1lUM2l6TFM1LnBuZyIsIm5hbWUiOiJEQyBDb21pY3MiLCJvcmlnaW5fY291bnRyeSI6IlVTIn1dLCJwcm9kdWN0aW9uX2NvdW50cmllcyI6W3siaXNvXzMxNjZfMSI6IlVTIiwibmFtZSI6IlVuaXRlZCBTdGF0ZXMgb2YgQW1lcmljYSJ9XSwicmVsZWFzZV9kYXRlIjoiMTk4OS0wNi0yMSIsInJldmVudWUiOjQxMTM0ODkyNCwicnVudGltZSI6MTI2LCJzcG9rZW5fbGFuZ3VhZ2VzIjpbeyJlbmdsaXNoX25hbWUiOiJFbmdsaXNoIiwiaXNvXzYzOV8xIjoiZW4iLCJuYW1lIjoiRW5nbGlzaCJ9LHsiZW5nbGlzaF9uYW1lIjoiRnJlbmNoIiwiaXNvXzYzOV8xIjoiZnIiLCJuYW1lIjoiRnJhbsOnYWlzIn1dLCJzdGF0dXMiOiJSZWxlYXNlZCIsInRhZ2xpbmUiOiJIYXZlIHlvdSBldmVyIGRhbmNlZCB3aXRoIHRoZSBkZXZpbCBpbiB0aGUgcGFsZSBtb29ubGlnaHQ/IiwidGl0bGUiOiJCYXRtYW4iLCJ2aWRlbyI6ZmFsc2UsInZvdGVfYXZlcmFnZSI6Ny4yMTYsInZvdGVfY291bnQiOjcxOTR9
+  recorded_at: Tue, 24 Oct 2023 22:51:36 GMT
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/565028?api_key=f7288e89c67ddeca054747d31c85225c
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Tue, 24 Oct 2023 19:52:05 GMT
+      Server:
+      - openresty
+      Cache-Control:
+      - public, max-age=27979
+      X-Memc:
+      - HIT
+      X-Memc-Key:
+      - 9638d048107890486f4505ed24c0846d
+      X-Memc-Age:
+      - '19207'
+      X-Memc-Expires:
+      - '6389'
+      Etag:
+      - W/"0b9bc087dcf2e5e3224352e2a057c1c2"
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Cache:
+      - Hit from cloudfront
+      Via:
+      - 1.1 20ebec22e4be2753f048f31dfe94e426.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN52-C1
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      X-Amz-Cf-Id:
+      - tirpoNGAlLTx6BUiZZa3TzOd6Sk7An0BBNXUJvVtpumDy8l5bUtLIQ==
+      Age:
+      - '10771'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJhZHVsdCI6ZmFsc2UsImJhY2tkcm9wX3BhdGgiOiIveEVOS2hvdEI2YVlCbG5ESDJsRTBtMnkyMnYxLmpwZyIsImJlbG9uZ3NfdG9fY29sbGVjdGlvbiI6eyJpZCI6OTg1ODAsIm5hbWUiOiJDYW5keW1hbiBDb2xsZWN0aW9uIiwicG9zdGVyX3BhdGgiOiIvdHk4aWJmTTZlaTF0Rmp5dkZDbGxNanpVeGV0LmpwZyIsImJhY2tkcm9wX3BhdGgiOiIvZ2NUWDY0aGxuYnlrU3RMblRDbmZFOEZiRHB2LmpwZyJ9LCJidWRnZXQiOjI1MDAwMDAwLCJnZW5yZXMiOlt7ImlkIjoyNywibmFtZSI6IkhvcnJvciJ9LHsiaWQiOjk2NDgsIm5hbWUiOiJNeXN0ZXJ5In0seyJpZCI6NTMsIm5hbWUiOiJUaHJpbGxlciJ9XSwiaG9tZXBhZ2UiOiJodHRwczovL3d3dy5jYW5keW1hbm1vdmllLmNvbS8iLCJpZCI6NTY1MDI4LCJpbWRiX2lkIjoidHQ5MzQ3NzMwIiwib3JpZ2luYWxfbGFuZ3VhZ2UiOiJlbiIsIm9yaWdpbmFsX3RpdGxlIjoiQ2FuZHltYW4iLCJvdmVydmlldyI6IkFudGhvbnkgYW5kIGhpcyBwYXJ0bmVyIG1vdmUgaW50byBhIGxvZnQgaW4gdGhlIG5vdyBnZW50cmlmaWVkIENhYnJpbmktR3JlZW4uIEFmdGVyIGEgY2hhbmNlIGVuY291bnRlciB3aXRoIGFuIG9sZC10aW1lciBleHBvc2VzIEFudGhvbnkgdG8gdGhlIHRydWUgc3RvcnkgYmVoaW5kIENhbmR5bWFuLCBoZSB1bmtub3dpbmdseSBvcGVucyBhIGRvb3IgdG8gYSBjb21wbGV4IHBhc3QgdGhhdCB1bnJhdmVscyBoaXMgb3duIHNhbml0eSBhbmQgdW5sZWFzaGVzIGEgdGVycmlmeWluZyB3YXZlIG9mIHZpb2xlbmNlLiIsInBvcHVsYXJpdHkiOjI1LjQwNCwicG9zdGVyX3BhdGgiOiIveWd5b2FROGJDcDRrRGNMYzZTZFA1R3ZxbURXLmpwZyIsInByb2R1Y3Rpb25fY29tcGFuaWVzIjpbeyJpZCI6MjEsImxvZ29fcGF0aCI6Ii81VmExSWU1YzRzamZFWXFpeFEzTDhxZzdmS3UucG5nIiwibmFtZSI6Ik1ldHJvLUdvbGR3eW4tTWF5ZXIiLCJvcmlnaW5fY291bnRyeSI6IlVTIn0seyJpZCI6ODg5MzQsImxvZ29fcGF0aCI6Ii81QmU5NlY5V1hhN2pKSW5TRFBxRE9xTUJBMG8ucG5nIiwibmFtZSI6Ik1vbmtleXBhdyBQcm9kdWN0aW9ucyIsIm9yaWdpbl9jb3VudHJ5IjoiVVMifSx7ImlkIjoxMzI0MCwibG9nb19wYXRoIjoiL2FUYzA3WWFOSG84V05na1FTbnZMbUc2dzRuVy5wbmciLCJuYW1lIjoiQnJvbiBTdHVkaW9zIiwib3JpZ2luX2NvdW50cnkiOiJDQSJ9LHsiaWQiOjMzLCJsb2dvX3BhdGgiOiIvOGx2SHloanI4b1VLT095MmRLWG9BTFdLZHAwLnBuZyIsIm5hbWUiOiJVbml2ZXJzYWwgUGljdHVyZXMiLCJvcmlnaW5fY291bnRyeSI6IlVTIn0seyJpZCI6NTMxNTIsImxvZ29fcGF0aCI6Ii84WEhITHk4R0dUdUhNOUpNellqR3F4QjZvUGEucG5nIiwibmFtZSI6IkNyZWF0aXZlIFdlYWx0aCBNZWRpYSBGaW5hbmNlIiwib3JpZ2luX2NvdW50cnkiOiJDQSJ9XSwicHJvZHVjdGlvbl9jb3VudHJpZXMiOlt7Imlzb18zMTY2XzEiOiJDQSIsIm5hbWUiOiJDYW5hZGEifSx7Imlzb18zMTY2XzEiOiJVUyIsIm5hbWUiOiJVbml0ZWQgU3RhdGVzIG9mIEFtZXJpY2EifV0sInJlbGVhc2VfZGF0ZSI6IjIwMjEtMDgtMjUiLCJyZXZlbnVlIjo3NzQxMTU3MCwicnVudGltZSI6OTEsInNwb2tlbl9sYW5ndWFnZXMiOlt7ImVuZ2xpc2hfbmFtZSI6IkVuZ2xpc2giLCJpc29fNjM5XzEiOiJlbiIsIm5hbWUiOiJFbmdsaXNoIn0seyJlbmdsaXNoX25hbWUiOiJGcmVuY2giLCJpc29fNjM5XzEiOiJmciIsIm5hbWUiOiJGcmFuw6dhaXMifV0sInN0YXR1cyI6IlJlbGVhc2VkIiwidGFnbGluZSI6IkRhcmUgdG8gc2F5IGhpcyBuYW1lLiIsInRpdGxlIjoiQ2FuZHltYW4iLCJ2aWRlbyI6ZmFsc2UsInZvdGVfYXZlcmFnZSI6Ni4wMzcsInZvdGVfY291bnQiOjEzOTV9
+  recorded_at: Tue, 24 Oct 2023 22:51:36 GMT
+- request:
+    method: get
     uri: https://api.themoviedb.org/3/movie/42470?api_key=f7288e89c67ddeca054747d31c85225c
     body:
       encoding: US-ASCII
@@ -24,22 +208,162 @@ http_interactions:
       - chunked
       Connection:
       - keep-alive
+      Date:
+      - Tue, 24 Oct 2023 20:59:07 GMT
       Server:
       - openresty
+      Cache-Control:
+      - public, max-age=28360
       X-Memc:
-      - HIT
+      - MISS, STORE
       X-Memc-Key:
       - 4b195b5bc531430b075228584131165f
       X-Memc-Age:
-      - '25528'
+      - '0'
       X-Memc-Expires:
-      - '958'
-      Date:
-      - Fri, 13 Oct 2023 23:10:39 GMT
-      Cache-Control:
-      - public, max-age=24737
+      - '28360'
       Etag:
-      - W/"ff3598050ab5cdf1cc1045f0d7165e61"
+      - W/"216faa0832a42342f682c69d0edc16b3"
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Cache:
+      - Hit from cloudfront
+      Via:
+      - 1.1 be7f6ce4397843276657a8babac08b6e.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN52-C1
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      X-Amz-Cf-Id:
+      - zIwtiW8e8MiYQL6LYrAIJN1b1exC28wOlk5Xipeb9jWL0GOdvN-_bg==
+      Age:
+      - '6748'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"adult":false,"backdrop_path":"/8MrWcsw5HqwRLvvNJS7doDq6xh0.jpg","belongs_to_collection":null,"budget":0,"genres":[{"id":18,"name":"Drama"},{"id":878,"name":"Science
+        Fiction"},{"id":53,"name":"Thriller"},{"id":12,"name":"Adventure"}],"homepage":"","id":42470,"imdb_id":"tt0069946","original_language":"en","original_title":"The
+        Day of the Dolphin","overview":"Dr. Jake Terrell, who has been training a
+        pair of dolphins for many years, has had a breakthrough. He has taught his
+        dolphins to speak and understand English, although they do have a limited
+        vocabulary. When the dolphins are stolen, he discovers they''re to be used
+        in an assassination attempt. Now he is in a race to discover who is the target,
+        and where the dolphins are, before the attempt is carried out.","popularity":5.655,"poster_path":"/vLztqesi2Dj5Ny74u33GufVzKR6.jpg","production_companies":[{"id":494,"logo_path":"/ioc65azmsAeL1XQN4dFnrpdJoMO.png","name":"AVCO
+        Embassy Pictures","origin_country":"US"}],"production_countries":[{"iso_3166_1":"US","name":"United
+        States of America"}],"release_date":"1973-12-19","revenue":0,"runtime":104,"spoken_languages":[{"english_name":"English","iso_639_1":"en","name":"English"}],"status":"Released","tagline":"Unwittingly,
+        he trained a dolphin to kill the president of the United States.","title":"The
+        Day of the Dolphin","video":false,"vote_average":5.9,"vote_count":42}'
+  recorded_at: Tue, 24 Oct 2023 22:51:36 GMT
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/42470?api_key=f7288e89c67ddeca054747d31c85225c
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Tue, 24 Oct 2023 20:59:07 GMT
+      Server:
+      - openresty
+      Cache-Control:
+      - public, max-age=28360
+      X-Memc:
+      - MISS, STORE
+      X-Memc-Key:
+      - 4b195b5bc531430b075228584131165f
+      X-Memc-Age:
+      - '0'
+      X-Memc-Expires:
+      - '28360'
+      Etag:
+      - W/"216faa0832a42342f682c69d0edc16b3"
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Cache:
+      - Hit from cloudfront
+      Via:
+      - 1.1 5babf08f08448687a0208408106aaed8.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN52-C1
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      X-Amz-Cf-Id:
+      - cje_i_tJO1mwTcs35HBpC6S2Ny_pVpjW_Nk5o1aSjwlN-31P6_xU1A==
+      Age:
+      - '6748'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"adult":false,"backdrop_path":"/8MrWcsw5HqwRLvvNJS7doDq6xh0.jpg","belongs_to_collection":null,"budget":0,"genres":[{"id":18,"name":"Drama"},{"id":878,"name":"Science
+        Fiction"},{"id":53,"name":"Thriller"},{"id":12,"name":"Adventure"}],"homepage":"","id":42470,"imdb_id":"tt0069946","original_language":"en","original_title":"The
+        Day of the Dolphin","overview":"Dr. Jake Terrell, who has been training a
+        pair of dolphins for many years, has had a breakthrough. He has taught his
+        dolphins to speak and understand English, although they do have a limited
+        vocabulary. When the dolphins are stolen, he discovers they''re to be used
+        in an assassination attempt. Now he is in a race to discover who is the target,
+        and where the dolphins are, before the attempt is carried out.","popularity":5.655,"poster_path":"/vLztqesi2Dj5Ny74u33GufVzKR6.jpg","production_companies":[{"id":494,"logo_path":"/ioc65azmsAeL1XQN4dFnrpdJoMO.png","name":"AVCO
+        Embassy Pictures","origin_country":"US"}],"production_countries":[{"iso_3166_1":"US","name":"United
+        States of America"}],"release_date":"1973-12-19","revenue":0,"runtime":104,"spoken_languages":[{"english_name":"English","iso_639_1":"en","name":"English"}],"status":"Released","tagline":"Unwittingly,
+        he trained a dolphin to kill the president of the United States.","title":"The
+        Day of the Dolphin","video":false,"vote_average":5.9,"vote_count":42}'
+  recorded_at: Tue, 24 Oct 2023 22:51:36 GMT
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/42470?api_key=f7288e89c67ddeca054747d31c85225c
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.11
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Tue, 24 Oct 2023 20:59:07 GMT
+      Server:
+      - openresty
+      Cache-Control:
+      - public, max-age=28360
+      X-Memc:
+      - MISS, STORE
+      X-Memc-Key:
+      - 4b195b5bc531430b075228584131165f
+      X-Memc-Age:
+      - '0'
+      X-Memc-Expires:
+      - '28360'
+      Etag:
+      - W/"216faa0832a42342f682c69d0edc16b3"
       Vary:
       - Accept-Encoding
       - Origin
@@ -52,9 +376,9 @@ http_interactions:
       Alt-Svc:
       - h3=":443"; ma=86400
       X-Amz-Cf-Id:
-      - w6C4NWcoE38M5XuBMlMFrUKlt8-PxrK4SS4ETIxigqoSdcs2bSwvGg==
+      - Ag0TDUPROop42u_mquenr4pwtdJbjbp373KvWZHoJ0WoB0nPRbIamQ==
       Age:
-      - '1509'
+      - '6748'
     body:
       encoding: ASCII-8BIT
       string: '{"adult":false,"backdrop_path":"/8MrWcsw5HqwRLvvNJS7doDq6xh0.jpg","belongs_to_collection":null,"budget":0,"genres":[{"id":18,"name":"Drama"},{"id":878,"name":"Science
@@ -64,138 +388,10 @@ http_interactions:
         dolphins to speak and understand English, although they do have a limited
         vocabulary. When the dolphins are stolen, he discovers they''re to be used
         in an assassination attempt. Now he is in a race to discover who is the target,
-        and where the dolphins are, before the attempt is carried out.","popularity":4.183,"poster_path":"/vLztqesi2Dj5Ny74u33GufVzKR6.jpg","production_companies":[{"id":494,"logo_path":"/ioc65azmsAeL1XQN4dFnrpdJoMO.png","name":"AVCO
+        and where the dolphins are, before the attempt is carried out.","popularity":5.655,"poster_path":"/vLztqesi2Dj5Ny74u33GufVzKR6.jpg","production_companies":[{"id":494,"logo_path":"/ioc65azmsAeL1XQN4dFnrpdJoMO.png","name":"AVCO
         Embassy Pictures","origin_country":"US"}],"production_countries":[{"iso_3166_1":"US","name":"United
         States of America"}],"release_date":"1973-12-19","revenue":0,"runtime":104,"spoken_languages":[{"english_name":"English","iso_639_1":"en","name":"English"}],"status":"Released","tagline":"Unwittingly,
         he trained a dolphin to kill the president of the United States.","title":"The
         Day of the Dolphin","video":false,"vote_average":5.9,"vote_count":42}'
-  recorded_at: Fri, 13 Oct 2023 23:35:48 GMT
-- request:
-    method: get
-    uri: https://api.themoviedb.org/3/movie/42470?api_key=f7288e89c67ddeca054747d31c85225c
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.11
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Server:
-      - openresty
-      X-Memc:
-      - HIT
-      X-Memc-Key:
-      - 4b195b5bc531430b075228584131165f
-      X-Memc-Age:
-      - '25528'
-      X-Memc-Expires:
-      - '958'
-      Date:
-      - Fri, 13 Oct 2023 23:10:39 GMT
-      Cache-Control:
-      - public, max-age=24737
-      Etag:
-      - W/"ff3598050ab5cdf1cc1045f0d7165e61"
-      Vary:
-      - Accept-Encoding
-      - Origin
-      X-Cache:
-      - Hit from cloudfront
-      Via:
-      - 1.1 39c272e966ab7a6f8a68d2222276a954.cloudfront.net (CloudFront)
-      X-Amz-Cf-Pop:
-      - DEN52-C1
-      Alt-Svc:
-      - h3=":443"; ma=86400
-      X-Amz-Cf-Id:
-      - bda9zZw6WdeQV0K-ZBaUYEsV7PRNDqcY2wYZfLy_JDZvaqY-57hMnw==
-      Age:
-      - '1509'
-    body:
-      encoding: ASCII-8BIT
-      string: '{"adult":false,"backdrop_path":"/8MrWcsw5HqwRLvvNJS7doDq6xh0.jpg","belongs_to_collection":null,"budget":0,"genres":[{"id":18,"name":"Drama"},{"id":878,"name":"Science
-        Fiction"},{"id":53,"name":"Thriller"},{"id":12,"name":"Adventure"}],"homepage":"","id":42470,"imdb_id":"tt0069946","original_language":"en","original_title":"The
-        Day of the Dolphin","overview":"Dr. Jake Terrell, who has been training a
-        pair of dolphins for many years, has had a breakthrough. He has taught his
-        dolphins to speak and understand English, although they do have a limited
-        vocabulary. When the dolphins are stolen, he discovers they''re to be used
-        in an assassination attempt. Now he is in a race to discover who is the target,
-        and where the dolphins are, before the attempt is carried out.","popularity":4.183,"poster_path":"/vLztqesi2Dj5Ny74u33GufVzKR6.jpg","production_companies":[{"id":494,"logo_path":"/ioc65azmsAeL1XQN4dFnrpdJoMO.png","name":"AVCO
-        Embassy Pictures","origin_country":"US"}],"production_countries":[{"iso_3166_1":"US","name":"United
-        States of America"}],"release_date":"1973-12-19","revenue":0,"runtime":104,"spoken_languages":[{"english_name":"English","iso_639_1":"en","name":"English"}],"status":"Released","tagline":"Unwittingly,
-        he trained a dolphin to kill the president of the United States.","title":"The
-        Day of the Dolphin","video":false,"vote_average":5.9,"vote_count":42}'
-  recorded_at: Fri, 13 Oct 2023 23:35:48 GMT
-- request:
-    method: get
-    uri: https://api.themoviedb.org/3/movie/0?api_key=f7288e89c67ddeca054747d31c85225c
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.11
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Content-Type:
-      - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Date:
-      - Fri, 13 Oct 2023 23:12:15 GMT
-      Server:
-      - openresty
-      Cache-Control:
-      - public, max-age=25751
-      X-Memc:
-      - MISS
-      X-Memc-Key:
-      - 0e0ea920af5920cd4be6a197189f1cf9
-      X-Memc-Age:
-      - '0'
-      X-Memc-Expires:
-      - '25751'
-      Vary:
-      - Accept-Encoding
-      - Origin
-      X-Cache:
-      - Error from cloudfront
-      Via:
-      - 1.1 f5cdd38f09a779678a15f788f0f3cbe2.cloudfront.net (CloudFront)
-      X-Amz-Cf-Pop:
-      - DEN52-C1
-      Alt-Svc:
-      - h3=":443"; ma=86400
-      X-Amz-Cf-Id:
-      - FWUeyu1ZJL6kudsYF9oOUsff9ZrzjMw0kDHzB3j-L60XDWxNAET1Ig==
-      Age:
-      - '1414'
-    body:
-      encoding: ASCII-8BIT
-      string: '{"success":false,"status_code":34,"status_message":"The resource you
-        requested could not be found."}'
-  recorded_at: Fri, 13 Oct 2023 23:35:48 GMT
+  recorded_at: Tue, 24 Oct 2023 22:51:36 GMT
 recorded_with: VCR 6.2.0

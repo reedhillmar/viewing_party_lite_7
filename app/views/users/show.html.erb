@@ -1,5 +1,5 @@
 <h3><%= "#{@user.name}'s Dashboard" %></h3>
-<%= button_to "Discover Movies", user_discover_path(@user), method: :get %>
+<%= button_to "Discover Movies", discover_path, method: :get %>
 
 <table>
   <tr>
@@ -18,7 +18,7 @@
     <section id="party-<%= party.id %>">
       <tr>
       <td><img src=<%= temp_movie.image_url %> alt= <%= temp_movie.title %>></td>
-      <td><%= link_to temp_movie.title, "/users/#{@user.id}/movies/#{party.movie_id}" %></td>
+      <td><%= link_to temp_movie.title, movie_path(party.movie_id) %></td>
       <td><%= "#{party.duration} min" %></td>
       <td><%= party.date_formatter(party.date_time) %></td>
       <td><%= party.time_formatter(party.date_time) %></td>

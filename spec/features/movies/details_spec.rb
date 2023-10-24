@@ -7,10 +7,15 @@ require 'rails_helper'
 RSpec.feature 'Movie Details' do
   before :each do
     load_test_data
+    visit '/'
+    click_link 'Log In'
+    fill_in :email, with: @anne.email
+    fill_in :password, with: @anne.password
+    click_button 'Log In'
   end
 
   it 'has a header', :vcr do
-    visit user_movie_path(@anne, @arthur[:movie_id])
+    visit movie_path(@arthur[:movie_id])
 
     expect(page).to have_link('Home')
     expect(page).to have_content('Viewing Party')
@@ -21,7 +26,7 @@ RSpec.feature 'Movie Details' do
   end
 
   it 'has a sub header', :vcr do
-    visit user_movie_path(@anne, @arthur[:movie_id])
+    visit movie_path(@arthur[:movie_id])
 
     within('#sub_header') do
       expect(page).to have_content('Arthur')
@@ -29,27 +34,27 @@ RSpec.feature 'Movie Details' do
   end
 
   it "has a button to the user's discover page", :vcr do
-    visit user_movie_path(@anne, @arthur[:movie_id])
+    visit movie_path(@arthur[:movie_id])
 
     within('#buttons') do
       click_button('Discover Movies')
     end
 
-    expect(page).to have_current_path(user_discover_path(@anne))
+    expect(page).to have_current_path(discover_path)
   end
 
   it 'has a button to create a view party for the movie', :vcr do
-    visit user_movie_path(@anne, @arthur[:movie_id])
+    visit movie_path(@arthur[:movie_id])
 
     within('#buttons') do
       click_button('Create Viewing Party for Arthur')
     end
 
-    expect(page).to have_current_path(new_user_movie_viewing_party_path(@anne, @arthur[:movie_id]))
+    expect(page).to have_current_path(new_viewing_party_path(@arthur[:movie_id]))
   end
 
   it 'shows the vote average for the movie', :vcr do
-    visit user_movie_path(@anne, @arthur[:movie_id])
+    visit movie_path(@arthur[:movie_id])
 
     within('#details') do
       expect(page).to have_content('Vote: 5.6')
@@ -57,7 +62,7 @@ RSpec.feature 'Movie Details' do
   end
 
   it 'shows the runtime for the movie', :vcr do
-    visit user_movie_path(@anne, @arthur[:movie_id])
+    visit movie_path(@arthur[:movie_id])
 
     within('#details') do
       expect(page).to have_content('Runtime: 1 hr 50 min')
@@ -65,7 +70,7 @@ RSpec.feature 'Movie Details' do
   end
 
   it 'shows the genres for the movie', :vcr do
-    visit user_movie_path(@anne, @arthur[:movie_id])
+    visit movie_path(@arthur[:movie_id])
 
     within('#details') do
       expect(page).to have_content('Genre(s): Comedy, Romance')
@@ -73,7 +78,7 @@ RSpec.feature 'Movie Details' do
   end
 
   it 'shows the summary for the movie', :vcr do
-    visit user_movie_path(@anne, @arthur[:movie_id])
+    visit movie_path(@arthur[:movie_id])
 
     within('#summary') do
       expect(page).to have_content('Summary')
@@ -83,7 +88,7 @@ RSpec.feature 'Movie Details' do
   end
 
   it 'shows the first 10 cast members for the movie', :vcr do
-    visit user_movie_path(@anne, @arthur[:movie_id])
+    visit movie_path(@arthur[:movie_id])
 
     within('#cast') do
       expect(page).to have_content('Cast')
@@ -113,15 +118,15 @@ RSpec.feature 'Movie Details' do
   end
 
   it 'shows total reviews for the movie', :vcr do
-    visit user_movie_path(@anne, @batman[:movie_id])
+    visit movie_path(@batman[:movie_id])
 
     within('#reviews') do
-      expect(page).to have_content('7 Reviews')
+      expect(page).to have_content('8 Reviews')
     end
   end
 
   it 'can show that there are no reviews', :vcr do
-    visit user_movie_path(@anne, @arthur[:movie_id])
+    visit movie_path(@arthur[:movie_id])
 
     within('#reviews') do
       expect(page).to have_content('0 Reviews')
@@ -129,7 +134,7 @@ RSpec.feature 'Movie Details' do
   end
 
   it 'shows reviews and their authors', :vcr do
-    visit user_movie_path(@anne, @batman[:movie_id])
+    visit movie_path(@batman[:movie_id])
 
     within('#reviews') do
       expect(page).to have_content("This movie is so bad I couldn't even finish it. - Albert, 4/10")

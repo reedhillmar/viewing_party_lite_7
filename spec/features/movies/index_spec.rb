@@ -5,10 +5,17 @@
 require 'rails_helper'
 
 RSpec.feature 'Welcome Index' do
-  it 'has a header', :vcr do
+  before :each do
     load_test_data
+    visit '/'
+    click_link 'Log In'
+    fill_in :email, with: @anne.email
+    fill_in :password, with: @anne.password
+    click_button 'Log In'
+  end
 
-    visit user_discover_path(@anne)
+  it 'has a header', :vcr do
+    visit discover_path
 
     click_button 'Find Top Rated Movies'
 
@@ -22,9 +29,7 @@ RSpec.feature 'Welcome Index' do
 
   describe 'top rated movies', :vcr do
     it 'shows movies' do
-      load_test_data
-
-      visit user_discover_path(@anne)
+      visit discover_path
 
       click_button 'Find Top Rated Movies'
 
@@ -33,23 +38,19 @@ RSpec.feature 'Welcome Index' do
     end
 
     it 'shows has link to movie show page' do
-      load_test_data
-
-      visit user_discover_path(@anne)
+      visit discover_path
 
       click_button 'Find Top Rated Movies'
 
       click_link 'The Nun II'
 
-      expect(page).to have_current_path("/users/#{@anne.id}/movies/968051")
+      expect(page).to have_current_path(movie_path(968051))
     end
   end
 
   describe 'keyword search' do
     it 'show a movie containing the keyword', :vcr do
-      load_test_data
-
-      visit user_discover_path(@anne)
+      visit discover_path
 
       fill_in :search, with: 'day dolphin'
       click_button 'Find Movies'
@@ -58,9 +59,7 @@ RSpec.feature 'Welcome Index' do
     end
 
     it 'shows movies containing the keyword', :vcr do
-      load_test_data
-
-      visit user_discover_path(@anne)
+      visit discover_path
 
       fill_in :search, with: 'dog'
       click_button 'Find Movies'
@@ -69,9 +68,7 @@ RSpec.feature 'Welcome Index' do
     end
 
     it 'page still renders when nothing is entered into the search', :vcr do
-      load_test_data
-
-      visit user_discover_path(@anne)
+      visit discover_path
 
       click_button 'Find Movies'
 

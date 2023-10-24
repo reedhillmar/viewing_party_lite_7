@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     user = User.create(user_params)
     if user.save
       session[:user_id] = user.id
-      redirect_to user_path(user)
+      redirect_to dashboard_path
     else
       redirect_to register_path
       flash[:alert] = "Error: #{error_message(user.errors)}"
@@ -16,11 +16,17 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    # require 'pry';binding.pry
+    if session[:user_id]
+      @user = User.find(session[:user_id])
+    else
+      flash[:alert] = "You must be registered and logged in to access your dashboard."
+      redirect_to '/'
+    end
   end
 
   def discover
-    @user = User.find(params[:user_id])
+    @user = User.find(session[:user_id])
   end
 
   def login_form; end
@@ -31,7 +37,7 @@ class UsersController < ApplicationController
     if user&.authenticate(params[:password])
       session[:user_id] = user.id
       flash[:success] = "Welcome, #{user.name}!"
-      redirect_to user_path(user.id)
+      redirect_to dashboard_path
     else
       flash[:error] = "Your credentials are incorrect."
       redirect_to login_path

@@ -1,5 +1,5 @@
 
-<%=  button_to "Discover Movies", user_discover_path(params[:user_id]), method: :get %>
+<%=  button_to "Discover Movies", discover_path, method: :get %>
 
 <% if params[:q] == "keyword" %>
   <h3> Movie results for: <%= params[:search] %>
@@ -9,7 +9,7 @@
 
 <% @movies.each do |movie| %>
   <section id="movie-<%= movie.id%>">
-    <%= link_to movie.title, "/users/#{params[:user_id]}/movies/#{movie.id}" %>
+    <%= link_to movie.title, movie_path(movie.id) %>
     <%=  " - Vote Average: #{movie.vote_average}" %></br>
   </section>
 <% end %>
